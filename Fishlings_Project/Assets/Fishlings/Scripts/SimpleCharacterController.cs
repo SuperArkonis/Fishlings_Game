@@ -19,7 +19,8 @@ public class SimpleCharacterController : MonoBehaviour
     public bool IsGrounded { get; private set; } //also takes into account slope limit, so if player is on steeper slope, they're not grounded
     public float ForwardInput { get; set; }
     public float TurnInput { get; set; }
-    public bool JumpInput { get; set; }
+    //public bool JumpInput { get; set; }
+    public GameObject text;
 
     new private Rigidbody rigidbody;
     private CapsuleCollider capsuleCollider;
@@ -32,11 +33,11 @@ public class SimpleCharacterController : MonoBehaviour
 
     private void FixedUpdate() //called every .02s. more reliable for character physics updates than Update since framerate can vary
     {
-        CheckGrounded();
+        //CheckGrounded();
         ProcessActions();
     }
 
-    void CheckGrounded()
+    /*void CheckGrounded()
     {
         IsGrounded = false;
         float capsuleHeight = Mathf.Max(capsuleCollider.radius * 2f, capsuleCollider.height);
@@ -55,7 +56,7 @@ public class SimpleCharacterController : MonoBehaviour
                     IsGrounded = true;
             }
         }
-    }
+    }*/
 
     void ProcessActions() //converts inputs into movement
     {
@@ -64,6 +65,7 @@ public class SimpleCharacterController : MonoBehaviour
         {
             float angle = Mathf.Clamp(TurnInput, -1f, 1f) * turnSpeed;
             transform.Rotate(Vector3.up, Time.fixedDeltaTime * angle);
+
         }
 
         // Movement
@@ -72,10 +74,10 @@ public class SimpleCharacterController : MonoBehaviour
         rigidbody.MovePosition(transform.position + move);
 
         // Jump
-        if (JumpInput && allowJump && IsGrounded)
+        /*if (JumpInput && allowJump && IsGrounded)
         {
             rigidbody.AddForce(transform.up * jumpSpeed, ForceMode.VelocityChange);
-        }
+        }*/
     }
 }
 
