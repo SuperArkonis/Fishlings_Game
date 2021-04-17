@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+/*public class PlayerController : MonoBehaviour
 {
     CharacterController characterController;
+    public GameObject inventory;
 
     public float speed = 6.0f;
     public float jumpSpeed = 8.0f;
@@ -23,19 +24,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if (characterController.isGrounded)
-        {
-            // We are grounded, so recalculate
-            // move direction directly from axes
-
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
-            moveDirection *= speed;
-
-            if (Input.GetButton("Jump"))
-            {
-                moveDirection.y = jumpSpeed;
-            }
-        }
 
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
@@ -52,5 +40,10 @@ public class PlayerController : MonoBehaviour
         characterController.Move(move * speed);
         this.transform.Rotate(this.rotation);
         
+
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+
+        }
     }
-}
+}*/

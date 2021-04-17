@@ -11,6 +11,7 @@ public class Fishing : MonoBehaviour
     public float distance;
     Vector3 startPoint;
     public bool fishHit = false;
+    public Fishventory fish;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,7 @@ public class Fishing : MonoBehaviour
                 if(fishHit)
                 {
                     Debug.Log("Fish Caught!");
+                    fish.AddItem((FishType)Random.Range(0, 4));
                 }
             }
 
@@ -56,10 +58,11 @@ public class Fishing : MonoBehaviour
                 bobber.SetActive(false);
                 bobber.transform.localPosition = startPoint;
                 fishHit = false;
-                speed = 8;
+                speed = 8;  
             }
         }
-        
+
+             
     }
 
     private void OnTriggerExit(Collider other)
@@ -77,4 +80,5 @@ public class Fishing : MonoBehaviour
             fishHit = true;
         }
     }
+
 }
