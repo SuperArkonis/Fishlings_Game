@@ -6,10 +6,11 @@ public class NPCController : MonoBehaviour
 {
     public GameObject dialogueBox;
     public GameObject shopKeeper;
+    public GameObject shopMenu;
 
-    /*void Update()
+    void Update()
     {
-        if(OnTriggerStay)
+        /*if(OnTriggerStay)
         {
             if (Input.GetKey(KeyCode.E))
             {
@@ -18,8 +19,17 @@ public class NPCController : MonoBehaviour
                 //shopKeeper.DialogueTrigger.TriggerDialogue();
                 shopKeeper.GetComponent<DialogueTrigger>().TriggerDialogue();
             }
+        }*/
+
+        if(shopMenu.activeInHierarchy)
+        {
+            dialogueBox.SetActive(false);
         }
-    }*/
+        if(Input.GetKey(KeyCode.P))
+        {
+            shopMenu.SetActive(false);
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {

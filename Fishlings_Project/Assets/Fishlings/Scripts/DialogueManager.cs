@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
 {
     public TMP_Text nameText;
     public TMP_Text dialogueText;
+    public GameObject shopMenu;
 
     public Queue<string> sentences; //fifo collection system
 
@@ -46,5 +47,6 @@ public class DialogueManager : MonoBehaviour
     void EndDialouge()
     {
         Debug.Log("End of convo.");
+        shopMenu.SetActive(true);
     }
 }
