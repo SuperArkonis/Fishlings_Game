@@ -35,6 +35,10 @@ public class SimpleCharacterController : MonoBehaviour
         {
             canvas.enabled = !canvas.enabled;
         }
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void FixedUpdate() //called every .02s. more reliable for character physics updates than Update since framerate can vary
