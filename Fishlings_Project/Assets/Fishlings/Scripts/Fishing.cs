@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Fishing : MonoBehaviour
 {
     public GameObject bobber;
     public GameObject castText;
+    public TMP_Text text;
     float zStartPos;
     public float startSpeed = 12;
     public float speed;
@@ -16,6 +18,9 @@ public class Fishing : MonoBehaviour
     public bool canCast = true;
     public GameObject player;
     public SimpleCharacterController playerMove;
+    Vector3 newScale;
+    Vector3 oldScale;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +30,8 @@ public class Fishing : MonoBehaviour
         zStartPos = bobber.transform.position.z;
         playerMove = player.GetComponent<SimpleCharacterController>();
         speed = startSpeed;
+        newScale = new Vector3(text.transform.localScale.x * -1f, text.transform.localScale.y, text.transform.localScale.z);
+        oldScale = new Vector3(text.transform.localScale.x, text.transform.localScale.y, text.transform.localScale.z);
     }
 
     // Update is called once per frame
@@ -41,6 +48,14 @@ public class Fishing : MonoBehaviour
             Debug.Log("Fish Caught!");
             fish.AddItem((FishType)Random.Range(0, 4));
             fishHit = false;
+        }
+        if(player.transform.eulerAngles.y >= -45f && player.transform.eulerAngles.y <= 135f)
+        {
+            text.transform.localScale = newScale;
+        }
+        if(player.transform.eulerAngles.y <= -45f || player.transform.eulerAngles.y >= 135f)
+        {
+            text.transform.localScale = oldScale;
         }
     }
 

@@ -39,10 +39,6 @@ public class SimpleCharacterController : MonoBehaviour
         {
             Application.Quit();
         }
-    }
-
-    private void FixedUpdate() //called every .02s. more reliable for character physics updates than Update since framerate can vary
-    {
         ProcessActions();
     }
 
