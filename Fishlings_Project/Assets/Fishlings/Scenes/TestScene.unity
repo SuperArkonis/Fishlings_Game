@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028398, g: 0.22571483, b: 0.30692393, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7521,7 +7521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slopeLimit: 45
   moveSpeed: 8
-  turnSpeed: 50
+  turnSpeed: 120
   inventoryCanvas: {fileID: 1680813703}
   canMove: 1
   canvas: {fileID: 1680813706}
