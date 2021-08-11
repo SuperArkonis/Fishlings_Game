@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 178906449441616868}
   - component: {fileID: 178906449441616871}
   - component: {fileID: 178906449441616870}
-  - component: {fileID: 178906449441616866}
+  - component: {fileID: 2550833154324598158}
+  - component: {fileID: 2564695930014000472}
   m_Layer: 0
   m_Name: fish
   m_TagString: Fish
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178906449441616889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.44, y: 0.08, z: -0.39}
-  m_LocalScale: {x: 1, y: 1, z: 2.1788}
+  m_LocalPosition: {x: -18.44, y: 0.15121, z: -0.39}
+  m_LocalScale: {x: 1, y: 0.18789645, z: 2.1788}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 655f7699ef454ae46aadd7ea2ff52b3f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,7 +98,29 @@ CapsuleCollider:
   m_Height: 1.0705836
   m_Direction: 2
   m_Center: {x: 0, y: 0.08769202, z: 0.004791898}
---- !u!114 &178906449441616866
+--- !u!195 &2550833154324598158
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178906449441616889}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.88
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &2564695930014000472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,9 +129,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 178906449441616889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8538df77302d9fd408ac69633319be7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 33ca6123bf3ca30479e3dc7a463cce70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fish: {fileID: 178906449441616889}
-  speed: 8
-  distance: 12
+  agent: {fileID: 2550833154324598158}
+  lure: {fileID: 0}
+  whatWater:
+    serializedVersion: 2
+    m_Bits: 16
+  whatLure:
+    serializedVersion: 2
+    m_Bits: 64
+  swimPoint: {x: 0, y: 0, z: 0}
+  swimPointRange: 20
+  sightRange: 2
+  attractRange: 2
+  lureInSight: 0
+  lureInChase: 0
