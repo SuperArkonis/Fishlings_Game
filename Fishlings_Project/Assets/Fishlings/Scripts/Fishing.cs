@@ -122,6 +122,8 @@ public class Fishing : MonoBehaviour
     //reference https://forum.unity.com/threads/throw-an-object-along-a-parabola.158855/#post-1087673
     IEnumerator SimulateProjectile()
     {
+
+        myTrans = target;
        
         // Move projectile to the position of throwing object + add some offset if needed.
         projectile.position = myTrans.position + new Vector3(0, 0.5f, 0);
