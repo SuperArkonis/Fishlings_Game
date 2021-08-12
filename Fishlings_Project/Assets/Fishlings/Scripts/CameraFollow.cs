@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class CameraFollow : MonoBehaviour
 {
@@ -19,21 +20,27 @@ public class CameraFollow : MonoBehaviour
         transform.position = player.transform.position + offset;
     }*/
 
-    public GameObject mainCam;
-    public GameObject fishCam;
+    public CinemachineVirtualCamera mainCam;
+    public CinemachineVirtualCamera fishCam;
+
+    void Start()
+    {
+        mainCam.Priority = 1;
+        fishCam.Priority = 0;
+    }
 
     void Update()
     {
         //swap camera view when going into and out of fishing mode
         if(Input.GetKeyUp(KeyCode.Space))
         {
-            mainCam.SetActive(false);
-            fishCam.SetActive(true);
+            mainCam.Priority = 0;
+            fishCam.Priority = 1;
         }
         else if(Input.GetKeyUp(KeyCode.E))
         {
-            mainCam.SetActive(true);
-            fishCam.SetActive(false);
+            mainCam.Priority = 1;
+            fishCam.Priority = 0;
         }
     }
 }
