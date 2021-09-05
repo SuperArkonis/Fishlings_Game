@@ -5,8 +5,8 @@ using UnityEngine;
 public class FishMove : MonoBehaviour
 {
     public GameObject fish;
-    public float speed = 8;
-    public float distance = 12;
+    public float speed = 8f;
+    public float distance = 12f;
     float zStartPos;
     // Start is called before the first frame update
     void Start()

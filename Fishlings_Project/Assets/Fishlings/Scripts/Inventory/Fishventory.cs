@@ -23,7 +23,7 @@ public class Fishventory : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            //AddItem((FishType)Random.Range(0, 4));
+            AddItem((FishType)Random.Range(0, 4));
         }
     }
 
