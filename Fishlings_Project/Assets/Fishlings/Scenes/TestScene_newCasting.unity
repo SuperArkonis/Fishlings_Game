@@ -1241,11 +1241,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 1.39
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Center.y
-      value: 1.64
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_IsTrigger
@@ -3230,11 +3230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 1.39
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Center.y
-      value: 1.64
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_IsTrigger
@@ -5086,11 +5086,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 1.39
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Center.y
-      value: 1.64
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_IsTrigger
@@ -6454,11 +6454,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 1.39
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Center.y
-      value: 1.64
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_IsTrigger
@@ -8769,6 +8769,8 @@ MonoBehaviour:
   waterSurfaceYCoord: -0.7
   bobberStartPosition: {fileID: 1872667701}
   castTime: 1
+  fishHit: 0
+  fish: {fileID: 1440561263}
   whatIsWater:
     serializedVersion: 2
     m_Bits: 16
@@ -10125,6 +10127,7 @@ GameObject:
   - component: {fileID: 1774356211}
   - component: {fileID: 1774356210}
   - component: {fileID: 1774356209}
+  - component: {fileID: 1774356212}
   m_Layer: 6
   m_Name: BobberSphere
   m_TagString: Untagged
@@ -10157,8 +10160,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.72
+  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!23 &1774356210
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10208,6 +10211,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774356207}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1774356212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774356207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec509893c4c45142befc109c3d58c32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fishHit: 0
+  fish: {fileID: 1440561263}
 --- !u!1001 &1775360764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10661,11 +10678,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 1.39
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Center.y
-      value: 1.64
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_IsTrigger
@@ -12622,11 +12639,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 1.39
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Center.y
-      value: 1.64
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_IsTrigger
@@ -12884,11 +12901,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Radius
-      value: 1
+      value: 1.39
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_Center.y
-      value: 1.64
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 178906449441616870, guid: 1cba82bea784ad44d834c828c4467812, type: 3}
       propertyPath: m_IsTrigger

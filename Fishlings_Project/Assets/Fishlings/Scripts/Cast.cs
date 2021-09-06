@@ -23,6 +23,8 @@ public class Cast : MonoBehaviour
     public Transform bobberStartPosition;
     public float castTime = 2.0f;
     float castTimeElapsed;
+    public bool fishHit = false;
+    public Fishventory fish;
 
     public LayerMask whatIsWater;
     // Start is called before the first frame update
@@ -80,6 +82,12 @@ public class Cast : MonoBehaviour
             }
             
         }
+        if(fishHit)
+        {
+            Debug.Log("Fish Caught!");
+            fish.AddItem((FishType)Random.Range(0, 4));
+            fishHit = false;
+        }
     }
 
     void TryCast()
@@ -115,4 +123,6 @@ public class Cast : MonoBehaviour
             castText.SetActive(false);
         }
     }
+
+    
 }
