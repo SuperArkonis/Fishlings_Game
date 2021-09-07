@@ -7,7 +7,7 @@ public class PlayerAttributes : MonoBehaviour
     public GameObject inventoryCanvas;
     public bool canMove = true;
     public Canvas canvas;
-    public bool canCast = true;
+    public bool canCast = false;
     Vector3 playerStart;
 
     private void Awake()

@@ -16,11 +16,17 @@ public class ThirdPersonMovement : MonoBehaviour
     float turnSmoothVelocity;
     float gravity = 9.8f;
     float vspeed = 0f;
+    Animator playerAnim;
+    Animator rodAnim;
+    public GameObject player;
+    public GameObject rod;
     
     void Awake()
     {
         controller = GetComponent<CharacterController>();
         attributes = GetComponent<PlayerAttributes>();
+        playerAnim = player.GetComponent<Animator>();
+        rodAnim = rod.GetComponent<Animator>();
     }
 
     void Start()
@@ -63,6 +69,13 @@ public class ThirdPersonMovement : MonoBehaviour
                 float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
                 transform.rotation = Quaternion.Euler(0f, angle, 0f);
                 
+                playerAnim.Play("Base Layer.Run");
+                rodAnim.Play("Base Layer.Rod Run");
+            }
+            if(direction.magnitude < 0.1f)
+            {
+                playerAnim.Play("Base Layer.Player_Idle");
+                rodAnim.Play("Base Layer.Rod Idle");
             }
         }
         

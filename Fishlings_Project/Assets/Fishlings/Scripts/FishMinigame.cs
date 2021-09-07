@@ -35,13 +35,14 @@ public class FishMinigame : MonoBehaviour
     [SerializeField] Transform progBarContainer;
 
     private float hundredpctLocalScale;
-    public float initialCompletion = 0.4f;
+    public float initialCompletion = 0.8f;
 
     void Start()
     {
         //Resize();
         hundredpctLocalScale = progBarContainer.localScale.y;
-        SetProgress(initialCompletion);
+        //SetProgress(initialCompletion);
+        Reset();
     }
     
     // Update is called once per frame
@@ -50,6 +51,11 @@ public class FishMinigame : MonoBehaviour
         Fish();
         Hook();
         ProgressCheck();
+    }
+
+    public void Reset()
+    {
+        SetProgress(initialCompletion);
     }
 
     void SetProgress(float pct)
@@ -97,7 +103,7 @@ public class FishMinigame : MonoBehaviour
     {
         if(Input.GetMouseButton(0))
         {
-            Debug.Log("ButtonPressed");
+            //Debug.Log("ButtonPressed");
             hookPullVelocity += hookPullPower * Time.deltaTime;
         }
         hookPullVelocity -= hookGravPower * Time.deltaTime;

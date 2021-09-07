@@ -21,10 +21,10 @@ public class Fishventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        /*if (Input.GetButtonDown("Fire1"))
         {
             AddItem((FishType)Random.Range(0, 4));
-        }
+        }*/
     }
 
     public void AddItem(FishType t)
@@ -40,7 +40,7 @@ public class Fishventory : MonoBehaviour
                  _fishInventory[t] = 1;
             }
             inventoryUI.UpdateWithNewFish(t);
-            Print();
+            //Print();
         }
     }
     public void RemoveItem(FishType t)

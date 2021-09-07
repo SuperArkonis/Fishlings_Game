@@ -14,6 +14,8 @@ public enum CastingState
 public class Cast : MonoBehaviour
 {
     public Animator bobberAnims;
+    public Animator rodAnim;
+    public Animator playerAnim;
     public CastingState castingState;
     public PlayerAttributes attributes;
     public GameObject bobber;
@@ -44,7 +46,9 @@ public class Cast : MonoBehaviour
             attributes.canMove = false;
             castTimeElapsed = 0.0f;
             castingState = CastingState.MID_CAST;
+            rodAnim.Play("Base Layer.Rod Pull");
             bobberAnims.Play("Base Layer.BobberCast");
+            playerAnim.Play("Base Layer.Cast");
         }
         if (castingState == CastingState.MID_CAST)
         {
@@ -99,8 +103,8 @@ public class Cast : MonoBehaviour
         if (col.CompareTag("Water"))
         {
             Debug.Log("Collided with water");
-            Collider[] watercols = Physics.OverlapSphere(castTarget.position, 
-            0.05f, whatIsWater);
+            Collider[] watercols = Physics.OverlapSphere(castTarget.position, 0.05f, whatIsWater);
+            attributes.canCast = true;
             if (watercols.Length > 0)
             {
                 castText.SetActive(true);
@@ -123,6 +127,8 @@ public class Cast : MonoBehaviour
     public void CastingCancelled()
     {
         bobberAnims.Play("Base Layer.NoAnim");
+        rodAnim.Play("Base Layer.Rod Idle");
+        playerAnim.Play("Base Layer.Player_Idle");
         bobber.SetActive(false);
         attributes.canMove = true;
         attributes.canCast = true;
