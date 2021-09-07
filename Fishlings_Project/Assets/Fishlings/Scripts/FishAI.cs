@@ -32,14 +32,13 @@ public class FishAI : MonoBehaviour
     {
         //Check for sight range
         lureInSight = Physics.CheckSphere(transform.position, sightRange, whatLure);
-        lureInChase = Physics.CheckSphere(transform.position, attractRange, whatLure);
+        //lureInChase = Physics.CheckSphere(transform.position, attractRange, whatLure);
 
-        if(!lureInSight && !lureInChase)
+        if(!lureInSight)// && !lureInChase)
         {
             Patrol();
         }
-
-        if(lureInSight && !lureInChase)
+        else
         {
             ChaseLure();
         }
@@ -60,7 +59,7 @@ public class FishAI : MonoBehaviour
         Vector3 distanceToSwimPoint = transform.position - swimPoint;
 
         //swim point reached
-        if(distanceToSwimPoint.magnitude < 1f)
+        if(distanceToSwimPoint.magnitude < 3f)
         {
             swimPointSet = false;
         }
@@ -68,12 +67,17 @@ public class FishAI : MonoBehaviour
 
     void SearchSwimPoint()
     {
-        float randomZ = Random.Range(-swimPointRange, swimPointRange);
-        float randomX = Random.Range(-swimPointRange, swimPointRange);
+        
+        //float randomZ = Random.Range(-swimPointRange, swimPointRange);
+        //float randomX = Random.Range(-swimPointRange, swimPointRange);
 
-        swimPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+        //swimPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
-        if(Physics.Raycast(swimPoint, -transform.up, 2f, whatWater))
+        Vector2 randPoint = Random.insideUnitCircle * swimPointRange;
+        //Debug.Log(randPoint);
+        swimPoint = new Vector3(randPoint.x + transform.position.x, transform.position.y, randPoint.y + transform.position.z);
+
+        if(Physics.Raycast((swimPoint+Vector3.up*5f), Vector3.down, 8f, whatWater))
         {
             swimPointSet = true;
         }
@@ -82,5 +86,14 @@ public class FishAI : MonoBehaviour
     void ChaseLure()
     {
         agent.SetDestination(lure.position);
+    }
+
+    void OnDrawGizmosSelected() 
+    {
+        if (swimPointSet)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawSphere(swimPoint, 0.3f);
+        }    
     }
 }

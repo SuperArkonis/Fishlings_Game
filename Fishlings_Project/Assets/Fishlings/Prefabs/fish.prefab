@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 178906449441616869}
   - component: {fileID: 178906449441616868}
   - component: {fileID: 178906449441616871}
-  - component: {fileID: 178906449441616870}
   - component: {fileID: 2550833154324598158}
   - component: {fileID: 2564695930014000472}
-  m_Layer: 0
+  - component: {fileID: 218273236}
+  - component: {fileID: 439388285612072847}
+  m_Layer: 4
   m_Name: fish
   m_TagString: Fish
   m_Icon: {fileID: 0}
@@ -84,20 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &178906449441616870
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178906449441616889}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.66434455
-  m_Height: 1.0705836
-  m_Direction: 2
-  m_Center: {x: 0, y: 0.08769202, z: 0.004791898}
 --- !u!195 &2550833154324598158
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -107,7 +94,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 178906449441616889}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.88
+  m_Radius: 0.32
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -141,8 +128,36 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   swimPoint: {x: 0, y: 0, z: 0}
-  swimPointRange: 20
-  sightRange: 2
-  attractRange: 2
+  swimPointRange: 40
+  sightRange: 6
+  attractRange: 6
   lureInSight: 0
   lureInChase: 0
+--- !u!114 &218273236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178906449441616889}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8538df77302d9fd408ac69633319be7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fish: {fileID: 178906449441616889}
+  speed: 8
+  distance: 12
+--- !u!135 &439388285612072847
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178906449441616889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.28
+  m_Center: {x: 0, y: 0, z: 0}

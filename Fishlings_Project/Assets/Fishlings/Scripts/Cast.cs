@@ -74,11 +74,7 @@ public class Cast : MonoBehaviour
             //Allow canceling.
             if(Input.GetKey(KeyCode.E))
             {
-                bobberAnims.Play("Base Layer.NoAnim");
-                bobber.SetActive(false);
-                attributes.canMove = true;
-                attributes.canCast = true;
-                castingState = CastingState.NOT_CASTING;
+                CastingCancelled();
             }
             
         }
@@ -124,5 +120,12 @@ public class Cast : MonoBehaviour
         }
     }
 
-    
+    public void CastingCancelled()
+    {
+        bobberAnims.Play("Base Layer.NoAnim");
+        bobber.SetActive(false);
+        attributes.canMove = true;
+        attributes.canCast = true;
+        castingState = CastingState.NOT_CASTING;
+    }
 }

@@ -6,6 +6,18 @@ public class BobberHit : MonoBehaviour
 {
     public bool fishHit = false;
     public Fishventory fish;
+    public Collider collider;
+    public GameObject minigame;
+
+    void OnEnable()
+    {
+        Reset();
+    }
+
+    public void Reset()
+    {
+        collider.enabled = true; //turn the collider back on if it is off.
+    }
 
     // Update is called once per frame
     void Update()
@@ -23,7 +35,9 @@ public class BobberHit : MonoBehaviour
         if(col.gameObject.tag == "Fish")
         {
             fishHit = true;
-            Destroy(col.gameObject);
+            //Destroy(col.gameObject);
+            collider.enabled = false; //turn off the collider
+            minigame.SetActive(true);
         }
     }
 }

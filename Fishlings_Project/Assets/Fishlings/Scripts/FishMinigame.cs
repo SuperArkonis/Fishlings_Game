@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FishMinigame : MonoBehaviour
 {
+
+    public UnityEvent OnMinigameWin;
+    public UnityEvent OnMinigameLose;
+    
     [SerializeField] Transform topPivot;
     [SerializeField] Transform bottomPivot;
 
@@ -29,9 +34,14 @@ public class FishMinigame : MonoBehaviour
 
     [SerializeField] Transform progBarContainer;
 
+    private float hundredpctLocalScale;
+    public float initialCompletion = 0.4f;
+
     void Start()
     {
         //Resize();
+        hundredpctLocalScale = progBarContainer.localScale.y;
+        SetProgress(initialCompletion);
     }
     
     // Update is called once per frame
@@ -42,11 +52,30 @@ public class FishMinigame : MonoBehaviour
         ProgressCheck();
     }
 
-    void ProgressCheck()
+    void SetProgress(float pct)
     {
         Vector3 ls = progBarContainer.localScale;
-        ls.y = hookProg;
+        float val = Mathf.Clamp(pct * hundredpctLocalScale, 0f, hundredpctLocalScale);;
+        ls.y = val;
         progBarContainer.localScale = ls;
+
+        if (val < 0.01f)
+        {
+            Debug.Log("You lost");
+            OnMinigameLose.Invoke();
+        }
+        else if (pct > 0.99f)
+        {
+            Debug.Log("you win");
+            OnMinigameWin.Invoke();
+        }
+    }
+
+    void ProgressCheck()
+    {
+        //Vector3 ls = progBarContainer.localScale;
+        //ls.y = hookProg;
+        //progBarContainer.localScale = ls;
 
         float min = hookPos - hookSize / 2;
         float max = hookPos + hookSize / 2;
@@ -60,7 +89,8 @@ public class FishMinigame : MonoBehaviour
             hookProg -= hookProgDegredationPower * Time.deltaTime;
         }
 
-        hookProg = Mathf.Clamp(hookProg, 0f, 1f);
+        hookProg = Mathf.Clamp(hookProg, 0f, 1.0f);
+        SetProgress(hookProg);
     }
 
     void Hook()
@@ -71,7 +101,7 @@ public class FishMinigame : MonoBehaviour
             hookPullVelocity += hookPullPower * Time.deltaTime;
         }
         hookPullVelocity -= hookGravPower * Time.deltaTime;
-
+        hookPullVelocity = Mathf.Clamp(hookPullVelocity, -1, 1);
         hookPos += hookPullVelocity;
         hookPos = Mathf.Clamp(hookPos, hookSize/2, 1 - hookSize/2);
         hook.position = Vector3.Lerp(bottomPivot.position, topPivot.position, hookPos);
