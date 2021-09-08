@@ -41,8 +41,7 @@ public class FishMinigame : MonoBehaviour
     {
         //Resize();
         hundredpctLocalScale = progBarContainer.localScale.y;
-        //SetProgress(initialCompletion);
-        Reset();
+        SetProgress(initialCompletion);
     }
     
     // Update is called once per frame
@@ -55,13 +54,15 @@ public class FishMinigame : MonoBehaviour
 
     public void Reset()
     {
-        SetProgress(initialCompletion);
+        Vector3 ls = progBarContainer.localScale;
+        ls.y = 0.4f * hundredpctLocalScale;
+        progBarContainer.localScale = ls;
     }
 
     void SetProgress(float pct)
     {
         Vector3 ls = progBarContainer.localScale;
-        float val = Mathf.Clamp(pct * hundredpctLocalScale, 0f, hundredpctLocalScale);;
+        float val = Mathf.Clamp(pct * hundredpctLocalScale, 0f, hundredpctLocalScale);
         ls.y = val;
         progBarContainer.localScale = ls;
 
@@ -69,11 +70,13 @@ public class FishMinigame : MonoBehaviour
         {
             Debug.Log("You lost");
             OnMinigameLose.Invoke();
+            
         }
         else if (pct > 0.99f)
         {
             Debug.Log("you win");
             OnMinigameWin.Invoke();
+            
         }
     }
 

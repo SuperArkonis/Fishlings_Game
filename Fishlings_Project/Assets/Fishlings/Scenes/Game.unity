@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4f3b0bf364fcf1b4288a04a842621bae, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1826048, g: 0.22550613, b: 0.29084697, a: 1}
+  m_IndirectSpecularColor: {r: 0.21160796, g: 0.1363045, b: 0.11871067, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1269,6 +1269,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2144660274158744126, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
   m_PrefabInstance: {fileID: 2094737118}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &285507824 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
+  m_PrefabInstance: {fileID: 2094737118}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285507823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba154fad903560d45928d0742c11be90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &293448590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8413,19 +8424,19 @@ MonoBehaviour:
   fishDetails:
   - fishType: 0
     fishSprite: {fileID: -2843299357937944970, guid: 370b2ac63cb0cd84da0eeecf9123ef86, type: 3}
-    fishName: Billy Bluebill
+    fishName: Bottled Bluebill
     fishPrice: 100
   - fishType: 1
     fishSprite: {fileID: 3073278049877931294, guid: 370b2ac63cb0cd84da0eeecf9123ef86, type: 3}
-    fishName: Rita Redhair
+    fishName: Redhair Ing
     fishPrice: 120
   - fishType: 2
     fishSprite: {fileID: -3209027340831218189, guid: 370b2ac63cb0cd84da0eeecf9123ef86, type: 3}
-    fishName: Gus Greenhouse
-    fishPrice: 110
+    fishName: Greenie Meanie
+    fishPrice: 104
   - fishType: 3
     fishSprite: {fileID: 3446899665053034493, guid: 370b2ac63cb0cd84da0eeecf9123ef86, type: 3}
-    fishName: Yvette Yello
+    fishName: Yellow Sharkfin
     fishPrice: 150
 --- !u!4 &1440561265
 Transform:
@@ -11648,7 +11659,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872667700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 1.313, z: 0}
+  m_LocalPosition: {x: -0.235, y: 1.203, z: 1.787}
   m_LocalScale: {x: 0.58757, y: 0.58757, z: 0.58757}
   m_Children: []
   m_Father: {fileID: 1540521165}
@@ -12240,6 +12251,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d04172fa33c1d4745aee858b1bda44cc, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 2b7df8d69baa04644b33382583518969, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5978556326899493109, guid: 2b7df8d69baa04644b33382583518969, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -13107,7 +13122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -13119,6 +13134,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
+      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
@@ -13136,19 +13155,23 @@ PrefabInstance:
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 285507823}
+      objectReference: {fileID: 1540521161}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1540521161}
+      objectReference: {fileID: 1774356212}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1774356212}
+      objectReference: {fileID: 191332664}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 191332664}
+      objectReference: {fileID: 285507823}
+    - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
+      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 285507824}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameLose.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -13178,6 +13201,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
+      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameLose.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -13191,19 +13218,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
-      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: CastingCancelled
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
-      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: GiveFish
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
-      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: SwapToMain
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
+      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
+      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: Reset
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameLose.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -13219,19 +13250,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
-      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: Cast, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
-      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: BobberHit, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
-      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: CameraFollow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
+      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
+      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: FishMinigame, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameLose.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -13259,6 +13294,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
       propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
+      propertyPath: OnMinigameWin.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2144660274158744127, guid: 3a3f0efb22e75d14eb34330a1b97965c, type: 3}
