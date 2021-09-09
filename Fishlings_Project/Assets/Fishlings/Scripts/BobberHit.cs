@@ -47,6 +47,7 @@ public class BobberHit : MonoBehaviour
             collider.enabled = false; //turn off the collider
             Debug.Log("Collider Off");
             minigame.SetActive(true);
+            minigame.GetComponent<FishMinigame>().Reset();
             sound.Play("Fish");
             sound.Play("Reel");
         }

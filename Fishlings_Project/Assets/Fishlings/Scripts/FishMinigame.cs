@@ -41,7 +41,7 @@ public class FishMinigame : MonoBehaviour
     {
         //Resize();
         hundredpctLocalScale = progBarContainer.localScale.y;
-        SetProgress(initialCompletion);
+        Reset();
     }
     
     // Update is called once per frame
@@ -54,9 +54,16 @@ public class FishMinigame : MonoBehaviour
 
     public void Reset()
     {
+        Debug.Log("Reset called");
+        hundredpctLocalScale = 5.836995f; //hardcoded localScale.y
         Vector3 ls = progBarContainer.localScale;
-        ls.y = 0.4f * hundredpctLocalScale;
+        ls.y = hundredpctLocalScale;
         progBarContainer.localScale = ls;
+        hookProg = initialCompletion;
+        SetProgress(initialCompletion);
+        /*Vector3 ls = progBarContainer.localScale;
+        ls.y = 0.4f * hundredpctLocalScale;
+        progBarContainer.localScale = ls;*/
     }
 
     void SetProgress(float pct)
