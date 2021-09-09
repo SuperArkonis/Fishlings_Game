@@ -9,6 +9,8 @@ public class BobberHit : MonoBehaviour
     public Collider collider;
     public GameObject minigame;
 
+    public AudioManager sound;
+
     void OnEnable()
     {
         Reset();
@@ -29,6 +31,11 @@ public class BobberHit : MonoBehaviour
             fish.AddItem((FishType)Random.Range(0, 4));
             fishHit = false;
         }*/
+        if(Input.GetKey(KeyCode.E))
+        {
+            sound.Stop("Reel");
+            minigame.SetActive(false);
+        }
     }
 
     void OnTriggerEnter(Collider col)
@@ -40,6 +47,8 @@ public class BobberHit : MonoBehaviour
             collider.enabled = false; //turn off the collider
             Debug.Log("Collider Off");
             minigame.SetActive(true);
+            sound.Play("Fish");
+            sound.Play("Reel");
         }
     }
 

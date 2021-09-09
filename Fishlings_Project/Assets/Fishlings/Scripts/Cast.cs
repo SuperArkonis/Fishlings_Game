@@ -13,6 +13,7 @@ public enum CastingState
 
 public class Cast : MonoBehaviour
 {
+    public AudioManager sound;
     public Animator bobberAnims;
     public Animator rodAnim;
     public Animator playerAnim;
@@ -48,7 +49,8 @@ public class Cast : MonoBehaviour
             castingState = CastingState.MID_CAST;
             rodAnim.Play("Base Layer.Rod Pull");
             bobberAnims.Play("Base Layer.BobberCast");
-            playerAnim.Play("Base Layer.Cast");
+            playerAnim.Play("Base Layer.Pull");
+            sound.Play("Cast");
         }
         if (castingState == CastingState.MID_CAST)
         {
@@ -79,6 +81,7 @@ public class Cast : MonoBehaviour
             if(Input.GetKey(KeyCode.E))
             {
                 CastingCancelled();
+                Reeled();
             }
             
         }
@@ -133,5 +136,11 @@ public class Cast : MonoBehaviour
         attributes.canMove = true;
         attributes.canCast = true;
         castingState = CastingState.NOT_CASTING;
+    }
+
+    public void Reeled()
+    {
+        playerAnim.Play("Base Layer.Keep");
+        rodAnim.Play("Base Layer.Keep");
     }
 }

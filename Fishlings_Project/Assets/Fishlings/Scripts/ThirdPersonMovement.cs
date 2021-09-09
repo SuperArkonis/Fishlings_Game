@@ -6,6 +6,7 @@ public class ThirdPersonMovement : MonoBehaviour
 {
     public CharacterController controller;
     public PlayerAttributes attributes;
+    public AudioManager sound;
 
     Vector3 initialDirectionForward;
     Vector3 initialDirectionRight;
@@ -20,6 +21,8 @@ public class ThirdPersonMovement : MonoBehaviour
     Animator rodAnim;
     public GameObject player;
     public GameObject rod;
+    bool isMoving = false;
+    AudioSource steps;
     
     void Awake()
     {
@@ -35,6 +38,7 @@ public class ThirdPersonMovement : MonoBehaviour
         initialDirectionForward.y = 0;
         initialDirectionRight = transform.right;
         initialDirectionRight.y = 0;
+        steps = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -71,13 +75,27 @@ public class ThirdPersonMovement : MonoBehaviour
                 
                 playerAnim.Play("Base Layer.Run");
                 rodAnim.Play("Base Layer.Rod Run");
+
+                isMoving = true;
+
+                //sound.Play("Steps");
             }
             if(direction.magnitude < 0.1f)
             {
                 playerAnim.Play("Base Layer.Player_Idle");
                 rodAnim.Play("Base Layer.Rod Idle");
+                isMoving = false;
             }
         }
         
+        if(isMoving && !steps.isPlaying)
+        {
+            //sound.Play("Steps");
+            steps.Play();
+        }
+        if(!isMoving)
+        {
+            steps.Stop();
+        }
     }
 }
