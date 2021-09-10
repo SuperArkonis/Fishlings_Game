@@ -21,7 +21,6 @@ public class ThirdPersonMovement : MonoBehaviour
     Animator rodAnim;
     public GameObject player;
     public GameObject rod;
-    bool isMoving = false;
     AudioSource steps;
     
     void Awake()
@@ -76,7 +75,7 @@ public class ThirdPersonMovement : MonoBehaviour
                 playerAnim.Play("Base Layer.Run");
                 rodAnim.Play("Base Layer.Rod Run");
 
-                isMoving = true;
+                attributes.isMoving = true;
 
                 //sound.Play("Steps");
             }
@@ -84,16 +83,16 @@ public class ThirdPersonMovement : MonoBehaviour
             {
                 playerAnim.Play("Base Layer.Player_Idle");
                 rodAnim.Play("Base Layer.Rod Idle");
-                isMoving = false;
+                attributes.isMoving = false;
             }
         }
         
-        if(isMoving && !steps.isPlaying)
+        if(attributes.isMoving && !steps.isPlaying)
         {
             //sound.Play("Steps");
             steps.Play();
         }
-        if(!isMoving)
+        if(!attributes.isMoving)
         {
             steps.Stop();
         }

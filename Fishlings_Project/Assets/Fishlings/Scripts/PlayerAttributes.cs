@@ -8,6 +8,7 @@ public class PlayerAttributes : MonoBehaviour
     public bool canMove = true;
     public Canvas canvas;
     public bool canCast = false;
+    public bool isMoving = false;
     Vector3 playerStart;
 
     private void Awake()

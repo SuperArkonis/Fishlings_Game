@@ -21,6 +21,7 @@ public class Cast : MonoBehaviour
     public PlayerAttributes attributes;
     public GameObject bobber;
     public GameObject castText;
+    public GameObject rod;
     public Transform castTarget; //end position for bobber
     public float waterSurfaceYCoord = 0.0f;
     public Transform bobberStartPosition;
@@ -51,6 +52,8 @@ public class Cast : MonoBehaviour
             bobberAnims.Play("Base Layer.BobberCast");
             playerAnim.Play("Base Layer.Pull");
             sound.Play("Cast");
+            attributes.isMoving = false;
+            rod.transform.localPosition = new Vector3(0.00579999993f,0f,-0.0238000005f);
         }
         if (castingState == CastingState.MID_CAST)
         {
@@ -58,18 +61,13 @@ public class Cast : MonoBehaviour
             if (castTimeElapsed >= castTime)
             {
                 castingState = CastingState.END_CAST;
-                bobber.transform.position = new Vector3(
-                    bobber.transform.position.x,
-                    waterSurfaceYCoord,
-                    bobber.transform.position.z);
+                bobber.transform.position = new Vector3(bobber.transform.position.x, waterSurfaceYCoord, bobber.transform.position.z);
+                sound.Play("Bobber");
             }
             else
             {
-                Vector3 waterPos = new Vector3(castTarget.position.x,
-                                waterSurfaceYCoord,
-                                castTarget.position.z);
-                bobber.transform.position = Vector3.Lerp(bobberStartPosition.position, 
-                                            waterPos, castTimeElapsed / castTime);
+                Vector3 waterPos = new Vector3(castTarget.position.x, waterSurfaceYCoord, castTarget.position.z);
+                bobber.transform.position = Vector3.Lerp(bobberStartPosition.position, waterPos, castTimeElapsed / castTime);
             }
         }
         if (castingState == CastingState.END_CAST)
@@ -135,6 +133,7 @@ public class Cast : MonoBehaviour
         bobber.SetActive(false);
         attributes.canMove = true;
         attributes.canCast = true;
+        rod.transform.localPosition = new Vector3(-0.00816682074f,0f,0.000416394236f);
         castingState = CastingState.NOT_CASTING;
     }
 
