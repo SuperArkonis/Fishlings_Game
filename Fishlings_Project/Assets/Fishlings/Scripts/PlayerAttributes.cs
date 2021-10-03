@@ -23,10 +23,10 @@ public class PlayerAttributes : MonoBehaviour
         {
             canvas.enabled = !canvas.enabled;
         }
-        if(Input.GetKey(KeyCode.Escape))
+        /*if(Input.GetKey(KeyCode.Escape))
         {
             Application.Quit();
-        }
+        }*/
     }
 
     void OnTriggerEnter(Collider other)
