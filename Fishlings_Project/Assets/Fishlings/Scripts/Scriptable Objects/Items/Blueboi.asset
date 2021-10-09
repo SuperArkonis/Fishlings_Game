@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a569e9cb9d65b4c9d42b35d1990a24, type: 3}
   m_Name: Blueboi
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 8348075768227907608, guid: 5b665ecf6d70ff94bba352858432160c, type: 3}
   type: 0
-  description: 
+  description: The bottleblue fish from the Southern clouds.
   value: 300

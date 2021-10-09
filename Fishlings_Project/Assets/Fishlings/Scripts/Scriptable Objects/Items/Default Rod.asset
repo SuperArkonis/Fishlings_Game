@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fcf45c195c20d479bd8a155f6a7e46, type: 3}
   m_Name: Default Rod
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 1383193528094385902, guid: a9f8e720ea3ebee41b56342d0a49f85c, type: 3}
   type: 1
-  description: 
+  description: Your trusty fishing rod!
   hookBonus: 0

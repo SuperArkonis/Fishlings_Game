@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 540ab7379e7cd9742927f64b4fb8d5ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 4bed2dc1fd1e6ad4e877413bd2b4fa65, type: 2}
+  item: {fileID: 11400000, guid: 8fc778f75b4c3c34d9b04636073b040f, type: 2}
 --- !u!4 &292031560
 Transform:
   m_ObjectHideFlags: 0
@@ -491,7 +491,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -813,6 +813,7 @@ GameObject:
   - component: {fileID: 1538487039}
   - component: {fileID: 1538487041}
   - component: {fileID: 1538487040}
+  - component: {fileID: 1538487042}
   m_Layer: 5
   m_Name: InventoryScreen
   m_TagString: Untagged
@@ -836,9 +837,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 947.4331, y: 18.316}
+  m_AnchoredPosition: {x: 1894.8663, y: -289.72473}
   m_SizeDelta: {x: -1894.8665, y: -616.0814}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1538487040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -877,6 +878,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538487038}
   m_CullTransparentMesh: 1
+--- !u!114 &1538487042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538487038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110385e099470344b80ad8c3ed39eaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: f51bb9dcfbee42845b367ef6c57ed908, type: 2}
+  X_START: 100
+  Y_START: -100
+  X_SPACE_BETWEEN_ITEM: 120
+  NUMBER_OF_COLUMN: 5
+  Y_SPACE_BETWEEN_ITEM: 120
 --- !u!1 &1813477133
 GameObject:
   m_ObjectHideFlags: 0
