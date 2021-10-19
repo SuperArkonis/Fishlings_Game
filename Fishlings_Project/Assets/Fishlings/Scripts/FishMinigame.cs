@@ -114,11 +114,12 @@ public class FishMinigame : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             //Debug.Log("ButtonPressed");
-            hookPullVelocity += hookPullPower * Time.deltaTime;
+            hookPullVelocity += hookPullPower;// * Time.deltaTime;
         }
-        hookPullVelocity -= hookGravPower * Time.deltaTime;
-        hookPullVelocity = Mathf.Clamp(hookPullVelocity, -1, 1);
-        hookPos += hookPullVelocity;
+        hookPullVelocity -= hookGravPower;
+        hookPullVelocity = Mathf.Clamp(hookPullVelocity, -0.2f, 1);
+        hookPos += hookPullVelocity * Time.deltaTime;
+        Debug.Log(hookPullVelocity);
         hookPos = Mathf.Clamp(hookPos, hookSize/2, 1 - hookSize/2);
         hook.position = Vector3.Lerp(bottomPivot.position, topPivot.position, hookPos);
     }

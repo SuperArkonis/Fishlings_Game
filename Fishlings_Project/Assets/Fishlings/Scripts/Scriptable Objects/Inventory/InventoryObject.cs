@@ -23,6 +23,30 @@ public class InventoryObject : ScriptableObject
             Container.Add(new InventorySlot(_item, _amount));
         }
     }
+
+    public void RemoveItem(ItemObject _item, int _amount = 1)
+    {
+        bool noItemsLeft = false;
+        InventorySlot theslot = null;
+        for(int i = 0; i < Container.Count; i++) //check if item already exists in inventory
+        {
+            if(Container[i].item == _item) //found item
+            {
+                theslot = Container[i];
+                if (theslot.amount >= _amount)
+                {
+                    Container[i].AddAmount(-_amount);
+                }
+                if (theslot.amount == 0)
+                    noItemsLeft = true;
+                break;
+            }
+        }
+        if(theslot != null && noItemsLeft)
+        {
+            Container.Remove(theslot);
+        }
+    }
 }
 
 [System.Serializable]

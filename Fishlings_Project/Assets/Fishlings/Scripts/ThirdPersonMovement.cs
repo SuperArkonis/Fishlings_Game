@@ -21,6 +21,7 @@ public class ThirdPersonMovement : MonoBehaviour
     Animator rodAnim;
     public GameObject player;
     public GameObject rod;
+    public GameObject shop;
     AudioSource steps;
     
     void Awake()
@@ -95,6 +96,15 @@ public class ThirdPersonMovement : MonoBehaviour
         if(!attributes.isMoving)
         {
             steps.Stop();
+        }
+
+        if(shop.active)
+        {
+            attributes.canMove = false;
+        }
+        else if(!shop.active)
+        {
+            attributes.canMove = true;
         }
     }
 }

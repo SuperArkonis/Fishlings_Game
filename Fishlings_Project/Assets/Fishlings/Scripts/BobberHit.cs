@@ -2,18 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class LootItem
+{
+    public string name;
+    public ItemObject item;
+    [Header("Don't put -ve prob")]
+    public float probability;
+}
+
 public class BobberHit : MonoBehaviour
 {
+
+    public LootItem[] lootTable;
     public bool fishHit = false;
-    public Fishventory fish;
+    //public Fishventory fish;
+    public InventoryObject playerInventory;
     public Collider collider;
     public GameObject minigame;
 
     public AudioManager sound;
+    float totalLootProbability;
 
     void OnEnable()
     {
         Reset();
+        totalLootProbability = 0;
+        foreach (LootItem l in lootTable )
+        {
+            totalLootProbability += l.probability;
+        }
     }
 
     public void Reset()
@@ -53,8 +71,39 @@ public class BobberHit : MonoBehaviour
         }
     }
 
+    public ItemObject RandomLootTableItem()
+    {
+        ItemObject retval = null;
+        if (totalLootProbability > 0)
+        {
+            //Make a random roll from 0 to the total of all item probs.
+            //Then sequentially subtract from that roll and choose the 
+            //item that causes the transition past 0.
+            float randomRoll = Random.Range(0, totalLootProbability);
+            foreach (LootItem l in lootTable)
+            {
+                randomRoll -= l.probability;
+                if (randomRoll <= 0)
+                {
+                    retval = l.item;
+                    break;
+                }
+            }
+        }
+        return retval;
+    }
+
     public void GiveFish()
     {
-        fish.AddItem((FishType)Random.Range(0, 4));
+        ItemObject randomItem = RandomLootTableItem();
+        if (randomItem != null)
+        {
+            playerInventory.AddItem(RandomLootTableItem(), 1);
+        }
+        else
+        {
+            Debug.LogError("Random loot table lookup problem");
+        }
+        //fish.AddItem((FishType)Random.Range(0, 4));
     }
 }
