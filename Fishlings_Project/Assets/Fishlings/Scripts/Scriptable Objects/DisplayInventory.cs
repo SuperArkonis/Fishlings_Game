@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DisplayInventory : MonoBehaviour
 {
+    public TextMeshProUGUI flavourText;
     public InventoryObject inventory;
+    ItemObject currentSelectedItem;
     public int X_START;
     public int Y_START;
     public int X_SPACE_BETWEEN_ITEM;
@@ -28,11 +31,16 @@ public class DisplayInventory : MonoBehaviour
     {
         for(int i = 0; i < inventory.Container.Count; i++)
         {
+            /*
             var obj = Instantiate(inventory.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform); //sets position, rotation, and parent
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
             obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
             itemsDisplayed.Add(inventory.Container[i], obj);
+            */
+            CreateInventoryDisplayItem(inventory.Container[i], i);
+
         }
+        currentSelectedItem = null;
     }
     public Vector3 GetPosition(int i)
     {
@@ -49,11 +57,43 @@ public class DisplayInventory : MonoBehaviour
             }
             else
             {
+                /*
                 var obj = Instantiate(inventory.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform); //sets position, rotation, and parent
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
                 obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
                 itemsDisplayed.Add(inventory.Container[i], obj);
+                */
+                CreateInventoryDisplayItem(inventory.Container[i], i);
             }
         }
+        
+    }
+
+    void CreateInventoryDisplayItem(InventorySlot slot, int index)
+    {
+        var obj = Instantiate(slot.item.prefab, Vector3.zero, Quaternion.identity, transform); //sets position, rotation, and parent
+        obj.GetComponent<RectTransform>().localPosition = GetPosition(index);
+        obj.GetComponentInChildren<TextMeshProUGUI>().text = slot.amount.ToString("n0");
+        itemsDisplayed.Add(slot, obj);
+
+        //Add button function via code
+        Button b = ((GameObject)obj).GetComponent<Button>();
+        if (b != null)
+        {
+            b.onClick.AddListener( delegate { OnSelectItem( slot.item ); } );
+            //Debug.Log(b.clickable); 
+        }
+    }
+
+    void OnSelectItem(ItemObject item)
+    {
+        Debug.Log(item.prefab);
+        currentSelectedItem = item;
+        flavourText.text = item.description;
+    }
+
+    private void OnApplicationQuit()
+    {
+        inventory.Container.Clear();//clears inventory when game quit
     }
 }
