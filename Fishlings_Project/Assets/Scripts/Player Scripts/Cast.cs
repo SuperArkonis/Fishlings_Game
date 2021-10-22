@@ -28,7 +28,7 @@ public class Cast : MonoBehaviour
     public float castTime = 2.0f;
     float castTimeElapsed;
     public bool fishHit = false;
-    public Fishventory fish;
+    //public Fishventory fish;
 
     public LayerMask whatIsWater;
     // Start is called before the first frame update
@@ -43,14 +43,16 @@ public class Cast : MonoBehaviour
         if (castingState == CastingState.START_CAST)
         {
             //begin the cast.
+            playerAnim.Play("Base Layer.Pull");
+            rodAnim.Play("Base Layer.Rod Pull");
             bobber.SetActive(true);
             bobber.transform.position = bobberStartPosition.position;
             attributes.canMove = false;
             castTimeElapsed = 0.0f;
             castingState = CastingState.MID_CAST;
-            rodAnim.Play("Base Layer.Rod Pull");
+            //rodAnim.Play("Base Layer.Rod Pull");
             bobberAnims.Play("Base Layer.BobberCast");
-            playerAnim.Play("Base Layer.Pull");
+            //playerAnim.Play("Base Layer.Pull");
             sound.Play("Cast");
             attributes.isMoving = false;
             rod.transform.localPosition = new Vector3(0.00579999993f,0f,-0.0238000005f);
@@ -75,6 +77,7 @@ public class Cast : MonoBehaviour
             
             //Other things to do would go here.
             bobberAnims.Play("Base Layer.BobberBob");
+            attributes.canMove = false;
             //Allow canceling.
             if(Input.GetKey(KeyCode.E))
             {
@@ -83,12 +86,12 @@ public class Cast : MonoBehaviour
             }
             
         }
-        if(fishHit)
+        /*if(fishHit)
         {
             Debug.Log("Fish Caught!");
             fish.AddItem((FishType)Random.Range(0, 4));
             fishHit = false;
-        }
+        }*/
     }
 
     void TryCast()

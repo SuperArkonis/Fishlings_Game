@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8a569e9cb9d65b4c9d42b35d1990a24, type: 3}
-  m_Name: Blueboi
+  m_Name: Salmon
   m_EditorClassIdentifier: 
   prefab: {fileID: 8348075768227907608, guid: 5b665ecf6d70ff94bba352858432160c, type: 3}
   type: 0
-  description: The bottleblue fish from the Southern clouds.
+  description: 'Cloud Salmon: This fish is a common occurence in the Cloud Lakes.'
   value: 300

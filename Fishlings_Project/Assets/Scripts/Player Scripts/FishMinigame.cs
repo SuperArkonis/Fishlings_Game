@@ -119,7 +119,7 @@ public class FishMinigame : MonoBehaviour
         hookPullVelocity -= hookGravPower;
         hookPullVelocity = Mathf.Clamp(hookPullVelocity, -0.2f, 1);
         hookPos += hookPullVelocity * Time.deltaTime;
-        Debug.Log(hookPullVelocity);
+        //Debug.Log(hookPullVelocity);
         hookPos = Mathf.Clamp(hookPos, hookSize/2, 1 - hookSize/2);
         hook.position = Vector3.Lerp(bottomPivot.position, topPivot.position, hookPos);
     }

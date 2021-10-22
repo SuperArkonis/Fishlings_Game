@@ -87,7 +87,7 @@ public class DisplayInventory : MonoBehaviour
 
     void OnSelectItem(ItemObject item)
     {
-        Debug.Log(item.prefab);
+        //Debug.Log(item.prefab);
         currentSelectedItem = item;
         flavourText.text = item.description;
     }

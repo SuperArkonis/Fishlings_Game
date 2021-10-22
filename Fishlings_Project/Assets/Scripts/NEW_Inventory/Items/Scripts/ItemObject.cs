@@ -6,6 +6,7 @@ public enum ItemType
 {
     Fish,
     Rod,
+    Bait,
     Default
 }
 public abstract class ItemObject : ScriptableObject

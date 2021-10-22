@@ -98,11 +98,11 @@ public class ThirdPersonMovement : MonoBehaviour
             steps.Stop();
         }
 
-        if(shop.active)
+        if(shop.activeSelf)
         {
             attributes.canMove = false;
         }
-        else if(!shop.active)
+        else if(!shop.activeSelf)
         {
             attributes.canMove = true;
         }
