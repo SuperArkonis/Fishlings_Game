@@ -5869,7 +5869,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Worm on a String
+  m_text: Glow Worm
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -19403,11 +19403,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootTable:
-  - name: Salmon
-    item: {fileID: 11400000, guid: 4bed2dc1fd1e6ad4e877413bd2b4fa65, type: 2}
+  - name: Airfish
+    item: {fileID: 11400000, guid: a5d1b8db610ef3447885468ed83ed56e, type: 2}
     probability: 1
-  - name: Red
-    item: {fileID: 11400000, guid: a1f1ab6b5e1b75341900d350a1c89846, type: 2}
+  - name: Bubblefish
+    item: {fileID: 11400000, guid: 6f00a05a4782b1d4d961fdbd9dd532fe, type: 2}
+    probability: 1
+  - name: Cloudfish
+    item: {fileID: 11400000, guid: 15367b986a0e0d2429391f894bc17c6b, type: 2}
+    probability: 1
+  - name: Golden Dreamer
+    item: {fileID: 11400000, guid: 59e916f6fe690124ebe405b936bf990e, type: 2}
+    probability: 1
+  - name: Lanternfish
+    item: {fileID: 11400000, guid: 23338699a174a744daf3cad8d930a939, type: 2}
+    probability: 1
+  - name: Magma Whale
+    item: {fileID: 11400000, guid: 267275a7316b5bd4d968e1ddfe1642bc, type: 2}
+    probability: 1
+  - name: The Devourer
+    item: {fileID: 11400000, guid: b26e0d5719d69e24d878c5b380f9a5b2, type: 2}
+    probability: 1
+  - name: Tracerfish
+    item: {fileID: 11400000, guid: a72b2a8da46cb1a4bb1219e44de0c681, type: 2}
     probability: 1
   fishHit: 0
   playerInventory: {fileID: 11400000, guid: f51bb9dcfbee42845b367ef6c57ed908, type: 2}
@@ -19487,7 +19505,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Butter Frog
+  m_text: Candy
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
