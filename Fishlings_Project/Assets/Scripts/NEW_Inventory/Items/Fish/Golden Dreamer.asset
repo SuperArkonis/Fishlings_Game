@@ -15,5 +15,8 @@ MonoBehaviour:
   prefab: {fileID: 4098699249766883733, guid: 9aedd92e266f7484fa89a6b50f93f996, type: 3}
   type: 0
   description: 'Golden Dreamer: Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    Value:
+    1000'
   value: 1000

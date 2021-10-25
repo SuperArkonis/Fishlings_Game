@@ -14,6 +14,8 @@ public class DisplayInventory : MonoBehaviour
     public int X_SPACE_BETWEEN_ITEM;
     public int NUMBER_OF_COLUMN;
     public int Y_SPACE_BETWEEN_ITEM;
+    public GameObject sellShop;
+    public GameObject button;
     Dictionary<InventorySlot, GameObject> itemsDisplayed = new Dictionary<InventorySlot, GameObject>();
     // Start is called before the first frame update
     void Start()
@@ -90,6 +92,16 @@ public class DisplayInventory : MonoBehaviour
         //Debug.Log(item.prefab);
         currentSelectedItem = item;
         flavourText.text = item.description;
+        if(sellShop.activeSelf)
+        {
+            button.SetActive(true);
+            Button sell = button.GetComponent<Button>();
+            if (sell != null)
+            {
+                sell.onClick.AddListener( delegate { inventory.RemoveItem(item, item.value); } );
+                //Debug.Log(sell.clickable); 
+            }
+        }
     }
 
     private void OnApplicationQuit()

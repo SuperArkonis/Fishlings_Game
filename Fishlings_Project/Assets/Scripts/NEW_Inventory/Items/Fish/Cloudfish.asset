@@ -15,5 +15,8 @@ MonoBehaviour:
   prefab: {fileID: 4098699249766883733, guid: 5845684756815c743b5fcf18eca31a17, type: 3}
   type: 0
   description: 'Cloudfish: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    Value:
+    150'
   value: 150

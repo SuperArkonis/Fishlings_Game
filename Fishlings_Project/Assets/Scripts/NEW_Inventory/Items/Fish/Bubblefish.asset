@@ -15,5 +15,8 @@ MonoBehaviour:
   prefab: {fileID: 4098699249766883733, guid: 89f09e6704706bb46aaf0c11c8ea8a4a, type: 3}
   type: 0
   description: 'Bubblefish: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    Value:
+    300'
   value: 300

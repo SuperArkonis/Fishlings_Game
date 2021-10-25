@@ -15,5 +15,8 @@ MonoBehaviour:
   prefab: {fileID: 4098699249766883733, guid: 662dca9965787d747ba4bea8c6308a9c, type: 3}
   type: 0
   description: 'Airfish: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    Value:
+    200'
   value: 200

@@ -15,5 +15,8 @@ MonoBehaviour:
   prefab: {fileID: 4098699249766883733, guid: c611809768cff934f9d8619c97e57b27, type: 3}
   type: 0
   description: 'Lanternfish: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+    Value:
+    450'
   value: 450

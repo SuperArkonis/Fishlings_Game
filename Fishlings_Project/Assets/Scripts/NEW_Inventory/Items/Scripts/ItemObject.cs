@@ -15,4 +15,5 @@ public abstract class ItemObject : ScriptableObject
     public ItemType type;
     [TextArea(15,20)] //makes description easier to read in editor
     public string description;
+    public int value;
 }

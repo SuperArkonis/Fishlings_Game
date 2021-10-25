@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8a569e9cb9d65b4c9d42b35d1990a24, type: 3}
-  m_Name: The Devourer
+  m_Name: Zapfish
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4098699249766883733, guid: db4574aed45fa14409f3bd70cb5eb2c8, type: 3}
+  prefab: {fileID: 8111619267795348920, guid: 8496c4b73c886e146a20575829815441, type: 3}
   type: 0
-  description: 'The Devourer: Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: 'Zapfish: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
     Value:
-    5000'
-  value: 5000
+    500'
+  value: 500

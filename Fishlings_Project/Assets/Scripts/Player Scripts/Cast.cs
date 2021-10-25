@@ -43,22 +43,27 @@ public class Cast : MonoBehaviour
         if (castingState == CastingState.START_CAST)
         {
             //begin the cast.
-            playerAnim.Play("Base Layer.Pull");
-            rodAnim.Play("Base Layer.Rod Pull");
+            //playerAnim.Play("Base Layer.Pull");
+            //rodAnim.Play("Base Layer.Rod Pull");
+            Debug.Log("Casting Started");
             bobber.SetActive(true);
             bobber.transform.position = bobberStartPosition.position;
             attributes.canMove = false;
             castTimeElapsed = 0.0f;
             castingState = CastingState.MID_CAST;
             //rodAnim.Play("Base Layer.Rod Pull");
-            bobberAnims.Play("Base Layer.BobberCast");
+            //bobberAnims.Play("Base Layer.BobberCast");
             //playerAnim.Play("Base Layer.Pull");
             sound.Play("Cast");
             attributes.isMoving = false;
             rod.transform.localPosition = new Vector3(0.00579999993f,0f,-0.0238000005f);
+            
         }
         if (castingState == CastingState.MID_CAST)
         {
+            bobberAnims.Play("Base Layer.BobberCast");
+            playerAnim.Play("Base Layer.Pull");
+            rodAnim.Play("Base Layer.Rod Pull");
             castTimeElapsed += Time.deltaTime;
             if (castTimeElapsed >= castTime)
             {
