@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 5998630008281699999, guid: f0fc127c02cc73241bf66603ba6c6da8, type: 3}
   type: 0
-  description: 'Candyfish: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: 'Candyfish: This fish earned its name as a result of the large, colourful,
+    and gelatinous formations that are scattered across its body. Eating these formations
+    is noted to cause feelings of happiness in the people that consume them.
 
     Value:
     350'

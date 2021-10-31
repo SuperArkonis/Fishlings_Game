@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4098699249766883733, guid: 5845684756815c743b5fcf18eca31a17, type: 3}
   type: 0
-  description: 'Cloudfish: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: 'Cloudfish: A fish that secretes a cloud-like gas from its body to
+    camouflage itself in the Cloud Sea when threatened by predators. They are quite
+    friendly towards humans and will often guide them through the clouds in bad weather.
 
     Value:
     150'

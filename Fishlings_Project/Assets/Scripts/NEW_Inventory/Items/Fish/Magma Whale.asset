@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4098699249766883733, guid: b7a4011b547599b4e806963f82b308b0, type: 3}
   type: 0
-  description: 'Magma Whale: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: 'Magma Whale: It seems you chose to fish here right in the middle
+    of the Magma Whale migratory season. These large creatures come from the Southern
+    Depths, only travelling North once every 200 years.
 
-    Value:
-    2000'
+    Value: 2000'
   value: 2000

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2116468, g: 0.13632827, b: 0.11851786, a: 1}
+  m_IndirectSpecularColor: {r: 0.21160796, g: 0.1363045, b: 0.11871067, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12991,7 +12991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &1159986869
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20025,35 +20025,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootTable:
+  - name: Zapfish
+    item: {fileID: 11400000, guid: 66fa4ef9d42398142b05cdb6bb7d3d59, type: 2}
+    probability: 10
   - name: Airfish
     item: {fileID: 11400000, guid: a5d1b8db610ef3447885468ed83ed56e, type: 2}
-    probability: 1
+    probability: 8
   - name: Bubblefish
     item: {fileID: 11400000, guid: 6f00a05a4782b1d4d961fdbd9dd532fe, type: 2}
-    probability: 1
+    probability: 8
   - name: Cloudfish
     item: {fileID: 11400000, guid: 15367b986a0e0d2429391f894bc17c6b, type: 2}
-    probability: 1
-  - name: Golden Dreamer
-    item: {fileID: 11400000, guid: 59e916f6fe690124ebe405b936bf990e, type: 2}
-    probability: 1
+    probability: 7
   - name: Lanternfish
     item: {fileID: 11400000, guid: 23338699a174a744daf3cad8d930a939, type: 2}
-    probability: 1
+    probability: 7
+  - name: Candyfish
+    item: {fileID: 11400000, guid: bcba1209181eab44e9c42ae1b4b9a890, type: 2}
+    probability: 5
+  - name: Tracerfish
+    item: {fileID: 11400000, guid: a72b2a8da46cb1a4bb1219e44de0c681, type: 2}
+    probability: 4
+  - name: Golden Dreamer
+    item: {fileID: 11400000, guid: 59e916f6fe690124ebe405b936bf990e, type: 2}
+    probability: 2
   - name: Magma Whale
     item: {fileID: 11400000, guid: 267275a7316b5bd4d968e1ddfe1642bc, type: 2}
     probability: 1
   - name: The Devourer
     item: {fileID: 11400000, guid: b26e0d5719d69e24d878c5b380f9a5b2, type: 2}
-    probability: 1
-  - name: Tracerfish
-    item: {fileID: 11400000, guid: a72b2a8da46cb1a4bb1219e44de0c681, type: 2}
-    probability: 1
-  - name: Candyfish
-    item: {fileID: 11400000, guid: bcba1209181eab44e9c42ae1b4b9a890, type: 2}
-    probability: 1
-  - name: Zapfish
-    item: {fileID: 11400000, guid: 66fa4ef9d42398142b05cdb6bb7d3d59, type: 2}
     probability: 1
   fishHit: 0
   playerInventory: {fileID: 11400000, guid: f51bb9dcfbee42845b367ef6c57ed908, type: 2}

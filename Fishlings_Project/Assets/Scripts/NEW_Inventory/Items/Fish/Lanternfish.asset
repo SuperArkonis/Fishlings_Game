@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4098699249766883733, guid: c611809768cff934f9d8619c97e57b27, type: 3}
   type: 0
-  description: 'Lanternfish: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: 'Lanternfish: A peaceful species of fish that have been domesticated
+    by Cloud Sea miners in recent decades. Their natural luminescence has also earned
+    them a place in many noble houses as decorative pets.
 
-    Value:
-    450'
+    Value: 450'
   value: 450

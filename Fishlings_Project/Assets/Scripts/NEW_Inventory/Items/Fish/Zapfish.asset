@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 8111619267795348920, guid: 8496c4b73c886e146a20575829815441, type: 3}
   type: 0
-  description: 'Zapfish: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: 'Zapfish: These electrified fish can be found zipping across the Cloud
+    Sea in packs called Arrowheads, owing to their triangular shape. Fiercely territorial,
+    one would be hard-pressed to try and catch one of these fish, much less try and
+    domesticate them.
 
-    Value:
-    500'
+    Value: 500'
   value: 500

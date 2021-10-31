@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4098699249766883733, guid: 89f09e6704706bb46aaf0c11c8ea8a4a, type: 3}
   type: 0
-  description: 'Bubblefish: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  description: 'Bubblefish: Created as a result of Star Crystal energy interacting
+    with pools of Bubblewater, the Bubblefish is a dazzling creature, with many members
+    of its species being highly sought after by other anglers.
 
-    Value:
-    300'
+    Value: 300'
   value: 300
